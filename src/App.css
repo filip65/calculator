@@ -247,10 +247,16 @@ form input::placeholder{
 .keys-wraper button{
   border: none;
   border-radius: 6px;
+  transition: .15s all;
 }
 
 .keys-wraper button:active{
   transform: scale(1.02);
+}
+
+.keys-wraper button:hover{
+  box-shadow: none;
+  margin-top: 4px;
 }
 
 .keys-wraper .key{
