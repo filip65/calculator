@@ -249,6 +249,10 @@ form input::placeholder{
   border-radius: 6px;
 }
 
+.keys-wraper button:active{
+  transform: scale(1.02);
+}
+
 .keys-wraper .key{
   background-color: var(--key-bg-orange);
   -webkit-box-shadow: 0px 4px 0px 0px var(--key-shadow-orange); 

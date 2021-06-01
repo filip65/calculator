@@ -28,6 +28,7 @@ function App() {
   }
 
   const calculate = () => {
+    /* eslint-disable no-eval */
     try {
       const output = eval(inputValue.replace('x','*'));
       if(output !== inputValue){
