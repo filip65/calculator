@@ -27,6 +27,17 @@ function App() {
     setInputValue(inputValue.slice(0,inputValue.length - 1))
   }
 
+  const keyboardTyping = (e) => {
+    const symbols = ['1','2','3','4','5','6','7','8','9','0','.','/','x','-','+'];
+
+    if(symbols.includes(e.key)){
+      setInputValue(oldValue => {
+        return oldValue + e.key
+      })
+    }
+
+  }
+
   const calculate = () => {
     /* eslint-disable no-eval */
     try {
@@ -63,6 +74,9 @@ function App() {
     localStorage.setItem('theme',theme);
   },[theme])
 
+  useEffect(() => {
+    document.addEventListener('keyup', keyboardTyping);
+  },[])
 
   return (
     <div className={`App ${theme}`} ref={app}>
